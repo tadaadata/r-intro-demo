@@ -35,6 +35,9 @@ alter                # Die gibt's.
 alter + 30
 alter * alter  # Quadrat-Jahre?
 
+# Mit Vairbalen kann gerechnet werden!
+alter + 30
+
 # Vektoren ----
 
 # Ein Vektor ist praktisch nur eine Reihe von Werten
