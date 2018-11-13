@@ -12,7 +12,7 @@ sqrt(64)
 # So könnt ihr euer Script kommentieren, damit ihr morgen noch wisst,
 # was ihr heute gemacht habt.
 
-# Es gilt auch in R: Klammern!
+# Es gilt auch in R: Rechenregeln (z.B. Klammern zuerst, Punkt vor Strich...)!
 (2 + 4) * 3
 2 + 4 * 3
 
@@ -31,11 +31,11 @@ Alter
 # "Error: object 'Alter' not found" -> Die Variable gibt's nicht
 alter                # Die gibt's.
 
-# Mit Vairbalen kann gerechnet werden!
+# Mit Variablen kann gerechnet werden!
 alter + 30
 alter * alter  # Quadrat-Jahre?
 
-# Mit Vairbalen kann gerechnet werden!
+# Mit Variablen kann gerechnet werden!
 alter + 30
 
 # Vektoren ----
