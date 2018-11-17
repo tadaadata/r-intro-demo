@@ -9,6 +9,8 @@ install.packages("sjPlot")
 install.packages("sjmisc")
 install.packages("rmarkdown")
 install.packages("skimr")
+install.packages("haven")
+install.packages("readr")
 
 
 # Das rödelt jetzt erstal in der Konsole, aber alles harmlos (außer ihr habt euch vertippt)
