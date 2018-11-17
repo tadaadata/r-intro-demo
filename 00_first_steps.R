@@ -50,3 +50,14 @@ groesse
 
 # Wir können mit Vektoren rechnen wie mit Zahlen
 groesse / 100   # Teilt jeden Wert durch 100, im Beispiel: Konvertiert cm in Meter
+
+# Vektoren können auch Buchstaben:
+
+namen <- c("Lukas", "Tobi", "Gesa", "Christoph", "Nadja")
+namen
+
+# Mit Buchstaben lässt sich nicht rechnen (gasp!)
+namen + 4
+
+# Error in namen + 4 : non-numeric argument to binary operator
+
