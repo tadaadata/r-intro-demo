@@ -1,0 +1,71 @@
+---
+title: "Beispielauswertung"
+author: "Peter Popel"
+output: 
+  html_document: 
+    theme: spacelab
+    toc: yes
+    toc_float: true
+---
+
+Das hier ist eine Beispielauswertung für den Datensatz `ngo`.
+
+## Datensatz einlesen und packages laden
+
+```{r, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+library(tadaatoolbox)
+library(sjPlot)
+library(sjmisc)
+
+ngo <- readRDS("data/ngo.rds")
+```
+
+## Datensatzbeschreibung
+
+```{r descriptives}
+descr(ngo)
+```
+
+## Beziehung zwischen **Urteil** und **Leistung**
+
+```{r}
+sjt.xtab(ngo$urteil, ngo$leistung)
+
+tadaa_ord(ngo$urteil, ngo$leistung, print = "markdown")
+```
+
+Oder als Scatterplot:
+
+```{r}
+ggplot(data = ngo, aes(x = urteil, y = leistung)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE, color = "red") +
+  labs(title = "Scatterplot von Urteil und Leistung",
+       subtitle = "Lineare Beziehung mit Regressionsgerade",
+       x = "Urteil", y = "Leistung") +
+  theme_tadaa()
+```
+
+
+## Geschlecht und Urteil
+
+```{r}
+ngo %>%
+  group_by(geschl) %>%
+  summarize(mean = mean(urteil),
+            median = median(urteil),
+            IQR = IQR(urteil),
+            sd = sd(urteil))
+
+ggplot(data = ngo, aes(x = geschl, y = urteil, fill = geschl)) +
+  geom_boxplot(alpha = .5) +
+  scale_y_continuous(breaks = pretty) +
+  scale_fill_brewer(palette = "Set1", guide = FALSE) +
+  labs(title = "Urteil nach Geschlecht",
+       subtitle = "Boxplots",
+       x = "Geschlecht", y = "Urteil") +
+  theme_tadaa()
+```
+
