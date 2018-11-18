@@ -61,3 +61,10 @@ namen + 4
 
 # Error in namen + 4 : non-numeric argument to binary operator
 
+# Vergleiche ----
+
+# Alle Werte aus groesse, die kleiner als 180 sind
+groesse[groesse < 180]
+
+# Alle Werte kleiner 170 ODER größer 180
+groesse[groesse < 170 | groesse > 180]
