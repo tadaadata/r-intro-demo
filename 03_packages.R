@@ -72,7 +72,7 @@ xpnorm(q = 160, mean = 175, sd = 10)
 # Oder plots (Datenvisualisierungen) via ggplot2 ----
 # Histogramme
 ggplot(data = ngo, aes(x = stunzahl)) +
-  geom_histogram(binwdith = 1) +
+  geom_histogram(binwidth = 1) +
   labs(title = "Histogramm von Stundenzahl")
 
 ggplot(data = ngo, aes(x = stunzahl)) +
