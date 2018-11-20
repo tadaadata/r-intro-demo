@@ -38,3 +38,10 @@ mean(groesse, na.rm = TRUE)
 median(groesse, na.rm = TRUE)
 sd(groesse, na.rm = TRUE)
 
+# Um mehr über eine Funktion zu erfahren - was sie macht, Beispielcode und
+# welche Argumente sie annimmt (na.rm z.B.) - benutzt man eine eigene Funktion:
+help("sd")
+help("quantile")
+# oder in kurz:
+?sd
+?quantile
